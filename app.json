@@ -18,7 +18,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Se necesita acceso a la cámara para tomar fotos",
-        "NSPhotoLibraryUsageDescription": "Se necesita acceso a la biblioteca de fotos para seleccionar una imagen de perfil"
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos.",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos."
       }
     },
     "android": {
@@ -29,7 +30,10 @@
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION"
       ]
     },
     "web": {
@@ -44,6 +48,17 @@
           "isAccessMediaLocationEnabled": true
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "45a856c4-5ec1-4435-aa0c-e59fbe51bd1c"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/45a856c4-5ec1-4435-aa0c-e59fbe51bd1c"
+    }
   }
 }
